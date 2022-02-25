@@ -1,0 +1,62 @@
+- Explain containers vs Image
+ 
+Image: A packaged form of an application
+
+when we stop container it becomes an image. 
+
+Docker images are read-only templates used to build containers.
+
+images are made up of series of layers and are immutable.
+
+New layer is built on every application update.
+
+Can be created from scratch (custom image).
+
+Can be downloaded via any registry (e.g. Docker Hub).
+
+Every image extends from a base image. (centos, ubuntu..)
+
+Every instruction of a Docker ﬁle is converted to a layer.
+
+Images are essentially a snapshot of a container that are then used
+to base containers upon.
+An image is simply a runnable component with filesystem.
+
+Docker image is a file composed of multiple layer, used to execute
+code in docker container. It becomes one or more instances of
+that
+containers.
+
+Layers in docker images are just tar files, can be shared b/w
+images.
+
+
+
+Containers:
+
+container is running form of an image
+
+Containers are deployed instances created from those templates.
+
+When we run an image it become container.
+
+Runnable instance of an image, created when we start an image with
+‘run’ command.
+
+When a container is created a thin read/write layer is put on top of
+image, Any changes made to the container is put on this read/write
+layer during the lifetime of the container.
+
+Can be started, stopped or even deleted (read/write layer is removed)
+at any time.
+
+We can start multiple containers of same image and each container
+runs in complete isolation which means each container maintains its
+own data safely on the top of the Docker Images as each has its own
+read/write layer.
+
+You can enter in to container using docker client API.
+
+
+
+
