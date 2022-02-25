@@ -1,0 +1,13 @@
+- Explain RUN vs CMD vs Entrypoint
+
+RUN: Build time command, if you want to run any command
+during the build of the image
+
+Entrypoint & CMD are runtime commands that are used to specify
+which command needs to run while running the container
+
+ENTRYPOINT: The executable to run while running the container
+
+
+CMD: If Entrypoint is not deﬁned, CMD becomes the 1st command
+but if deﬁned, CMD is passed as an argument to Entrypoint
